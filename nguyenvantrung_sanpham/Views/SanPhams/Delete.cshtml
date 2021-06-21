@@ -1,0 +1,57 @@
+﻿@model nguyenvantrung_sanpham.Models.QLSanPham
+
+@{
+    ViewBag.Title = "Xoá";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>CymBakery</h2>
+
+<h3>Bạn Chắc Chắn Muốn Xoá?</h3>
+<div>
+    <h4>Xoá Sản Phẩm:</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.MaSP)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MaSP)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TenSP)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TenSP)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Solg)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Solg)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Gia)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Gia)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Xoá" class="btn btn-default" /> |
+            @Html.ActionLink("Về Trang Trước", "Index")
+        </div>
+    }
+</div>

@@ -1,0 +1,52 @@
+﻿@model IEnumerable<nguyenvantrung_sanpham.Models.QLSanPham>
+
+@{
+    ViewBag.Title = "Trang Chủ";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>CymBakery</h2>
+
+<p>
+    @Html.ActionLink("Thêm Mới", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.MaSP)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TenSP)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Solg)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Gia)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.MaSP)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.TenSP)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Solg)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Gia)
+        </td>
+        <td>
+            @Html.ActionLink("Sửa", "Edit", new { id=item.ID }) |
+            @Html.ActionLink("Hiển Thị", "Details", new { id=item.ID }) |
+            @Html.ActionLink("Xoá", "Delete", new { id=item.ID })
+        </td>
+    </tr>
+}
+
+</table>

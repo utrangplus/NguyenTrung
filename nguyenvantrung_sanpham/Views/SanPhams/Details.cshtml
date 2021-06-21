@@ -1,0 +1,51 @@
+﻿@model nguyenvantrung_sanpham.Models.QLSanPham
+
+@{
+    ViewBag.Title = "Hiển Thị";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>CymBakery</h2>
+
+<div>
+    <h4>Chi Tiết Sản Phẩm:</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.MaSP)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MaSP)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TenSP)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TenSP)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Solg)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Solg)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Gia)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Gia)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Sửa", "Edit", new { id = Model.ID }) |
+    @Html.ActionLink("Về Trang Trước", "Index")
+</p>

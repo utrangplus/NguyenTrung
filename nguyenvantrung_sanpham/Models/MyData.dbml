@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="QuanLySanPham" Class="MyDataDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="WebSettings" ConnectionString="Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\QuanLySanPham.mdf;Integrated Security=True" SettingsObjectName="System.Configuration.ConfigurationManager.ConnectionStrings" SettingsPropertyName="QuanLySanPhamConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.SanPham" Member="SanPhams">
+    <Type Name="SanPham">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="MaSP" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="TenSP" Type="System.String" DbType="NVarChar(150)" CanBeNull="true" />
+      <Column Name="Solg" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Gia" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </Type>
+  </Table>
+</Database>
